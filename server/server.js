@@ -19,7 +19,7 @@ app.listen(port, function onStart(err) {
     }
     console.info('Server started on port %s', port)
 })    
-const url = "mongodb+srv://admin-mern:"+secret+"@mern-projects.uuzhb.mongodb.net/socialFeedClone?retryWrites=true&w=majority"
+const url = "mongodb+srv://"+secret+"?retryWrites=true&w=majority"
 MongoClient.connect(url, (err, db) => {
     console.log("Connected to mongo atlas server")
     db.close()
