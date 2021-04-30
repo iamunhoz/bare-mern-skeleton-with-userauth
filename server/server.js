@@ -3,6 +3,7 @@ import express from 'express'
 import { MongoClient } from 'mongodb'
 import template from './../template.js'
 import devBundle from './devBundle.js'
+import secret from './../.secret.js'
 
 const app = express()
 devBundle.compile(app)
@@ -18,7 +19,7 @@ app.listen(port, function onStart(err) {
     }
     console.info('Server started on port %s', port)
 })    
-const url = "mongodb+srv://admin-mern:asumdois345@mern-projects.uuzhb.mongodb.net/socialFeedClone?retryWrites=true&w=majority"
+const url = "mongodb+srv://admin-mern:"+secret+"@mern-projects.uuzhb.mongodb.net/socialFeedClone?retryWrites=true&w=majority"
 MongoClient.connect(url, (err, db) => {
     console.log("Connected to mongo atlas server")
     db.close()
