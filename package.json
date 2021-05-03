@@ -5,7 +5,8 @@
   "main": "template.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamunhoz/social-feed-clone.git"},
+    "url": "https://github.com/iamunhoz/social-feed-clone.git"
+  },
   "author": "iamunhoz",
   "license": "MIT",
   "private": false,
@@ -16,7 +17,13 @@
   },
   "dependencies": {
     "@hot-loader/react-dom": "^17.0.1",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "helmet": "^4.6.0",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.7",
     "react": "^17.0.2",
