@@ -15,6 +15,14 @@ const config = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
+            },
+            { /**talvez esse não seja necessário */
+                test: /\.(png|jpe?g|webp|git|svg|)$/i,
+                use: [
+                    {
+                      loader: 'img-optimize-loader',
+                    },
+                  ]
             }
         ]
     }

@@ -20,6 +20,14 @@ const config = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: [ 'babel-loader' ]
+            },
+            {/**talvez não seja necessário */
+                test: /\.(png|jpe?g|webp|git|svg|)$/i,
+                use: [
+                    {
+                      loader: 'img-optimize-loader',
+                    },
+                  ]
             }
         ]
     }

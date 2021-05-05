@@ -5,7 +5,7 @@ const CURRENT_WORKING_DIR = process.cwd();
 const config = {
     name: "browser",
     mode: 'development',
-    devtool: 'eval-source-map',
+    devtool: 'cheap-module-source-map',//'eval-source-map' breaks due to CSP
     entry: [
         'webpack-hot-middleware/client?reload=true',
         path.join(CURRENT_WORKING_DIR, 'client/main.js')
@@ -21,6 +21,14 @@ const config = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
+            },
+            {
+                test: /\.(png|jpe?g|webp|git|svg|)$/i,
+                use: [
+                    {
+                      loader: 'img-optimize-loader',
+                    },
+                  ]
             }
         ]
     },
