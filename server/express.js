@@ -5,7 +5,8 @@ import compress from 'compression'
 import cors from 'cors'
 import helmet from 'helmet'
 import userRoutes from './routes/user.routes'
-
+import authRoutes from './routes/auth.routes'
+import authErrorHandler from './helpers/authErrorHandler'
 
 const app = express()
 
@@ -17,5 +18,8 @@ app.use(helmet())
 app.use(cors())
 
 app.use('/', userRoutes)
+app.use('/', authRoutes)
+
+app.use(authErrorHandler)
 
 export default app

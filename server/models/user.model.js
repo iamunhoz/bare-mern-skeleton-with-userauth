@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import crypto from 'crypto'
 
 const UserSchema = new mongoose.Schema({
     name: {
@@ -20,7 +21,7 @@ const UserSchema = new mongoose.Schema({
     updated: Date,
     hashed_password: {
         type: String,
-        required: 'Password is required'
+        required: 'Password is required (?)'
     },
     salt: String
 
@@ -56,7 +57,7 @@ UserSchema.path('hashed_password').validate(function(v) {
         this.invalidate('password', 'Password must be at least 6 characters')
     }
     if (this.isNew && !this._password) {
-        this.invalidate('password', 'Password is required')
+        this.invalidate('password', 'Password is required *')
     }
 }, null)
 

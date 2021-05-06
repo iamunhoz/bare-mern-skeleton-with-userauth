@@ -1,11 +1,11 @@
-import path from 'path'
-import express from 'express'
-import config from './../config/config'
 import app from './express'
-import template from './../template.js'
-import devBundle from './devBundle.js'
-import mongoose from 'mongoose'
 import chalk from 'chalk'
+import config from './../config/config'
+import devBundle from './devBundle.js'
+import express from 'express'
+import path from 'path'
+import mongoose from 'mongoose'
+import template from './../template.js'
 
 
 mongoose.Promise = global.Promise
