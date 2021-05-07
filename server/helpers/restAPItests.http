@@ -1,3 +1,6 @@
+### This file containts http requests for testing purposes
+### It was made to be used on vs-code with 'Rest Client' extension installed
+
 ###variables
 @server = http://127.0.0.1:3001
 
@@ -55,4 +58,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDk0MWY4Y
     "name": "Arauja Ojuara"
 }
 ### sigv{{server}}n out
-GET ser/auth/signout HTTP/1.1
+GET {{server}}/auth/signout HTTP/1.1
+
+### asks -only- for /dist/bundle.js (express test)
+GET {{server}}/dist/bundle.js HTTP/1.1
+
