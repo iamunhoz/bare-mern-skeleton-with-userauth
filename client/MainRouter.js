@@ -4,7 +4,7 @@ import Home from './core/Home'
 
 const MainRouter = () => {
 	return (
-		<div>
+		<div className="MainRouter" style={{ backgroundColor: '#2a1' }}>
 			<Switch>
 				<Route exact path="/" component={Home}/>
 			</Switch>
