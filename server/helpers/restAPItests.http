@@ -7,6 +7,9 @@
 ### fetches for HOMEPAGE
 GET {{server}}
 
+### fetches /signin page
+GET {{server}}/signup
+
 ### create user1 - must fail if it already exists.
 POST {{server}}/api/users HTTP/1.1
 content-type: application/json

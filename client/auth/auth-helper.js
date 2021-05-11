@@ -24,4 +24,4 @@ const auth = {
 	}
 }
 
-export { auth }
+export default auth

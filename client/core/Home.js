@@ -20,6 +20,9 @@ const useStyles = makeStyles(theme => ({
 	},
 	media: {
 		minHeight: 400
+	},
+	link: {
+		marginRight: 5
 	}
 }))
 
@@ -39,7 +42,8 @@ export default function Home() {
 			</CardContent>
 		</Card>
 
-		<Link to='/users'>User List</Link>
-		<Link to='/signup'>Sign Up</Link>
+		<Link className={classes.link} to='/users'>User List</Link>
+		<Link className={classes.link} to='/signup'>Sign Up</Link>
+		<Link className={classes.link} to='/signin'>Sign In</Link>
 	</div>)
 }
