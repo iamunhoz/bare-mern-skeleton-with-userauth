@@ -40,5 +40,6 @@ export default function Home() {
 		</Card>
 
 		<Link to='/users'>User List</Link>
+		<Link to='/signup'>Sign Up</Link>
 	</div>)
 }
