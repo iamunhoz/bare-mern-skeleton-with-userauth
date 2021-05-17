@@ -22,6 +22,9 @@ const useStyles = makeStyles(theme => ({
 	},
 	link: {
 		marginRight: 5
+	},
+	text: {
+		color: theme.palette.primary.contrastText
 	}
 }))
 
@@ -35,7 +38,7 @@ export default function Home() {
 			<CardMedia className={classes.media}
 				image={dancemacabre} title="Skeletons also dance"/>
 			<CardContent>
-				<Typography variant="body2" component="p">
+				<Typography variant="h6" component="p" className={classes.text}>
 					This is a MERN skeleton with CRUD capabilities
 				</Typography>
 			</CardContent>

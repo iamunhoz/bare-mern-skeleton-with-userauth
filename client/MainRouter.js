@@ -8,10 +8,18 @@ import EditProfile from './user/EditProfile'
 import Profile from './user/Profile'
 import PrivateRoute from './auth/PrivateRoute'
 import Menu from './core/Menu'
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles(theme => ({
+	MainRouter: {
+		backgroundColor: theme.palette.primary.light
+	}
+}))
 
 const MainRouter = () => {
+	const classes = useStyles()
 	return (
-		<div className="MainRouter" style={{ backgroundColor: '#2a1' }}>
+		<div className={classes.MainRouter}>
 			<Menu />
 			<Switch>
 				<Route exact path="/" component={Home}/>

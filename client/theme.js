@@ -6,16 +6,16 @@ const theme = createMuiTheme({
 	},
 	palette: {
 		primary: {
-			light: '#b0ff57',
-			main: '#76ff03',
-			dark: '#32cb00',
-			contrastText: '#000'
+			light: '#4d4d4d',
+			main: '#212121',
+			dark: '#171717',
+			contrastText: '#ccc'
 		},
 		secondary: {
-			light: '#e7ff8c',
-			main: '#b2ff59',
-			dark: '#7ecb20',
-			contrastText: '#000'
+			light: '#3378af',
+			main: '#01579b',
+			dark: '#003c6c',
+			contrastText: '#ccc'
 		},
 		openTitle: '#fbec5d',
 		protectedTitle: green['400'],
