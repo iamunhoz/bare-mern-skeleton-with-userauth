@@ -5,7 +5,6 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import dancemacabre from './../assets/images/dancemacabre.jpg'
-import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
 	card: {
@@ -41,9 +40,5 @@ export default function Home() {
 				</Typography>
 			</CardContent>
 		</Card>
-
-		<Link className={classes.link} to='/users'>User List</Link>
-		<Link className={classes.link} to='/signup'>Sign Up</Link>
-		<Link className={classes.link} to='/signin'>Sign In</Link>
 	</div>)
 }

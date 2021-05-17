@@ -31,7 +31,7 @@ const list = async (signal) => {
 
 const read = async (params, credentials, signal) => {
 	try {
-		const response = await fetch('/api/users' + params.userId, {
+		const response = await fetch('/api/users/' + params.userId, {
 			method: 'GET',
 			signal: signal,
 			headers: {
