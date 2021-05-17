@@ -36,7 +36,7 @@ app.listen(config.port, function onStart(err) {
     if (err) {
         console.log(err)
     }
-    console.info(chalk.bold(`Server started on port ${config.port}`))
+    console.info(chalk.bold.blue(`Server has started and is listening to port ${config.port}`))
 })    
 
 

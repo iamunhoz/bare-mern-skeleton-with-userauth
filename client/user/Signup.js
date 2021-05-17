@@ -17,14 +17,20 @@ import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
 	card: {
-		maxWidth: 600,
+		width: '50%',
 		margin: 'auto',
 		marginTop: theme.spacing(5),
-		backgroundColor: theme.palette.primary.dark
+		backgroundColor: theme.palette.primary.dark,
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center'
 	},
 	title: {
 		padding: `${theme.spacing(3)}px ${theme.spacing(2.5)}px ${theme.spacing(2)}px`,
 		color: theme.palette.openTitle
+	},
+	textfield: {
+		color: theme.palette.primary.contrastText
 	}
 }))
 

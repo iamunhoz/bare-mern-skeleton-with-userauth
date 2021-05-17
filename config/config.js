@@ -1,11 +1,11 @@
-//mongoCredentials.js contains private password and is not synced with repo. Has to be recreated upon cloning
-import {wholeStr, jwtSecret} from './.mongoCredentials.js' 
+// mongoCredentials.js contains private password and is not synced with repo. Has to be recreated upon cloning
+import secrets from './.mongoCredentials.js'
 
 const config = {
-    env: process.env.NODE_ENV || 'development',
-    port: 3001,
-    jwtSecret: jwtSecret,
-    mongoUri: "mongodb+srv://"+wholeStr+"?retryWrites=true&w=majority"
+	env: process.env.NODE_ENV || 'development',
+	port: 3001,
+	jwtSecret: secrets.jwt,
+	mongoUri: 'mongodb+srv://' + secrets.mongoCredentials + '?retryWrites=true&w=majority'
 }
 
 export default config
@@ -18,8 +18,12 @@ const mongoCredentials = {
     uri: 'xxxxx.yyyyyy.mongodb.net',
     defaultDb: 'db-name'
 }
-const wholeStr = `${mongoCredentials.user}:${mongoCredentials.pass}@${mongoCredentials.uri}/${mongoCredentials.defaultDb}`
-const jwtSecret = 'secretWord'
-export default {wholeStr, jwtSecret}
 
+const secrets = {
+    mongoCredentials: `${mongoCredentials.user}:${mongoCredentials.pass}@${mongoCredentials.uri}/${mongoCredentials.defaultDb}`,
+    jwt: 'secretWord'
+
+}
+
+export default secrets
 */

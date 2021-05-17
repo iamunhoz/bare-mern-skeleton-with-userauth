@@ -13,11 +13,12 @@ import { signin } from './api-auth'
 
 const useStyles = makeStyles(theme => ({
 	card: {
-		maxWidth: 600,
+		maxWidth: '50%',
 		margin: 'auto',
 		textAlign: 'center',
 		marginTop: theme.spacing(5),
-		paddingBottom: theme.spacing(2)
+		paddingBottom: theme.spacing(2),
+		backgroundColor: theme.palette.primary.dark
 	},
 	error: {
 		verticalAlign: 'middle'
@@ -29,7 +30,8 @@ const useStyles = makeStyles(theme => ({
 	textField: {
 		marginLeft: theme.spacing(1),
 		marginRight: theme.spacing(1),
-		width: 300
+		width: 300,
+		color: theme.palette.primary.contrastText
 	},
 	submit: {
 		margin: 'auto',

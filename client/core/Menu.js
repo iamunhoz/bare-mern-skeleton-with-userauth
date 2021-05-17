@@ -9,8 +9,10 @@ import Button from '@material-ui/core/Button'
 import HomeIcon from '@material-ui/icons/Home'
 import { makeStyles } from '@material-ui/core/styles'
 
+import theme from './../theme'
+
 const isActive = (history, path) => {
-	if (history.location.pathname == path) { return { color: '#ff4081' } } else { return { color: '#ffffff' } }
+	if (history.location.pathname == path) { return { color: theme.palette.secondary.main } } else { return { color: '#ffffff' } }
 }
 
 const useStyles = makeStyles({

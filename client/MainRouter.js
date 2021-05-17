@@ -12,7 +12,8 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
 	MainRouter: {
-		backgroundColor: theme.palette.primary.light
+		backgroundColor: theme.palette.primary.light,
+		height: '100%'
 	}
 }))
 

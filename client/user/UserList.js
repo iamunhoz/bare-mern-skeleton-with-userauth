@@ -16,7 +16,9 @@ import { list } from './api-user.js'
 
 const useStyles = makeStyles(theme => ({
 	root: {
-		backgroundColor: theme.palette.primary.dark
+		backgroundColor: theme.palette.primary.dark,
+		width: '50%',
+		margin: '25 auto'
 	},
 	title: {
 		color: theme.palette.openTitle
