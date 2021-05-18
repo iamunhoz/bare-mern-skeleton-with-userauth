@@ -18,10 +18,23 @@ const useStyles = makeStyles(theme => ({
 	root: {
 		backgroundColor: theme.palette.primary.dark,
 		width: '50%',
-		margin: '25 auto'
+		margin: '50px auto',
+		padding: '25px 0'
 	},
 	title: {
-		color: theme.palette.openTitle
+		color: theme.palette.openTitle,
+		margin: '0 auto',
+		width: '50%',
+		textAlign: 'center'
+	},
+	username: {
+		'& *': {
+			textDecoration: 'none',
+			color: theme.palette.primary.contrastText
+		}
+	},
+	arrow: {
+		color: theme.palette.primary.contrastText
 	}
 }))
 
@@ -61,10 +74,10 @@ export default function UserList() {
 										<Person/>
 									</Avatar>
 								</ListItemAvatar>
-								<ListItemText primary={item.name}/>
+								<ListItemText className={classes.username} primary={item.name}/>
 								<ListItemSecondaryAction>
 									<IconButton>
-										<ArrowForward/>
+										<ArrowForward className={classes.arrow}/>
 									</IconButton>
 								</ListItemSecondaryAction>
 							</ListItem>
